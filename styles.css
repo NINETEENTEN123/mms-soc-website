@@ -1,0 +1,25 @@
+body {
+    background-image: url('az_background.jpeg');
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+::selection {
+    background-color: yellow;
+    color: black;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+.header {
+    margin: 0px;
+    padding: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a:hover {
+    color: white;
+    background-color: gray;
+}

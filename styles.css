@@ -1,157 +1,466 @@
+
+/* =========================================
+   MMS SCIENCE OLYMPIAD
+   Classic Academic Theme
+   ========================================= */
+
+/* Color palette */
+:root {
+    --navy: #192d46;
+    --navy-light: #29435f;
+    --gold: #b89a58;
+    --gold-light: #d8c69b;
+    --cream: #f5f1e8;
+    --paper: #fffdf8;
+    --text: #282c32;
+    --muted: #626873;
+    --border: #d9d2c3;
+    --white: #ffffff;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
 body {
-    background-image: url('az_background.jpeg');
-    background-size: cover;
-    color: white;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.65;
 }
+
 ::selection {
-    background-color: yellow;
-    color: black;
+    background-color: var(--gold-light);
+    color: var(--navy);
 }
-h1, h2, h3 {
-    text-align: center;
+
+img {
+    max-width: 100%;
 }
+
+/* =========================================
+   HEADER AND NAVIGATION
+   ========================================= */
+
 .header {
-    margin: 0px;
-    padding: 10px;
-    background-color: black;
+    width: 100%;
+    margin: 0;
+    padding: 18px 5%;
+    background-color: var(--navy);
+    border-bottom: 4px solid var(--gold);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-a:hover {
-    color: white;
-    background-color: gray;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
-/* Events page */
+.logo {
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.65rem;
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+.logo:hover {
+    color: var(--gold-light);
+    background-color: transparent;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.header nav a {
+    display: inline-block;
+    padding: 9px 14px;
+    color: var(--white);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.header nav a:hover,
+.header nav a:focus-visible {
+    background-color: var(--navy-light);
+    color: var(--gold-light);
+}
+
+.header nav a[aria-current="page"] {
+    color: var(--gold-light);
+    border-bottom: 2px solid var(--gold);
+}
+
+/* =========================================
+   GENERAL HEADINGS
+   ========================================= */
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.3;
+}
+
+h1 {
+    color: var(--navy);
+}
+
+h2 {
+    color: var(--navy);
+}
+
+h3 {
+    color: var(--navy-light);
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+/* =========================================
+   EVENTS PAGE
+   ========================================= */
+
 .events-page {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 24px;
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 45px 0 30px;
 }
 
-.events-page h1 {
-    margin-bottom: 10px;
+/* Page introduction */
+
+.page-intro {
+    max-width: 780px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #806a39;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+.page-intro h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: normal;
+    letter-spacing: -0.025em;
+}
+
+.title-rule {
+    width: 90px;
+    height: 3px;
+    margin: 20px auto;
+    background-color: var(--gold);
 }
 
 .events-intro {
-    text-align: center;
-    margin-bottom: 30px;
-    color: white;
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.05rem;
 }
+
+/* =========================================
+   EVENT GRID
+   ========================================= */
 
 .events-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    align-items: stretch;
+    gap: 22px;
 }
 
+/* =========================================
+   COLLAPSED EVENT BOXES
+   ========================================= */
+
 .event-box {
-    background: rgba(0, 0, 0, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-left: 5px solid #55b86a;
-    border-radius: 12px;
-    padding: 24px;
-    min-height: 150px;
-    box-sizing: border-box;
+    position: relative;
+    min-width: 0;
+    min-height: 235px;
+    padding: 27px 28px 22px;
+
+    background-color: var(--paper);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--navy);
+    border-radius: 3px;
+
     cursor: pointer;
-    transition: background 0.25s, border-color 0.25s;
+    outline-offset: 4px;
+
+    box-shadow: 0 2px 5px rgba(25, 45, 70, 0.04);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
 .event-box:hover {
-    background: rgba(25, 45, 30, 0.95);
-    border-color: #55b86a;
+    border-top-color: var(--gold);
+    box-shadow: 0 5px 15px rgba(25, 45, 70, 0.09);
+}
+
+.event-box:focus-visible {
+    outline: 3px solid var(--gold);
+}
+
+.event-number {
+    margin-bottom: 10px;
+    color: #8b7547;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.16em;
 }
 
 .event-box h2 {
-    color: #75dc89;
-    margin-top: 0;
-    font-size: 1.4rem;
+    margin: 0 0 12px;
+    font-size: 1.65rem;
+    font-weight: normal;
 }
 
-.event-box > p {
-    color: #eeeeee;
-    line-height: 1.6;
+.event-summary {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
 }
 
-.event-details {
-    display: none;
-}
+.expand-label {
+    display: inline-block;
+    margin-top: 3px;
+    padding-bottom: 3px;
 
-.event-box.expanded {
-    grid-column: 1 / -1;
-    min-height: 70vh;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.92);
-    cursor: pointer;
-}
+    color: #806a39;
+    border-bottom: 1px solid var(--gold-light);
 
-.event-box.expanded h2 {
-    font-size: 2rem;
-}
-
-.event-box.expanded .event-details {
-    display: block;
-    margin-top: 30px;
-    color: white;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.event-box.expanded::after {
-    content: "Click to collapse";
-    display: block;
-    margin-top: 30px;
-    color: #75dc89;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
     font-weight: bold;
+    letter-spacing: 0.035em;
 }
 
-@media (max-width: 650px) {
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
+/* =========================================
+   EXPANSION LOGIC
+   This is the key to hiding the topic slots.
+   ========================================= */
 
-    .event-box.expanded {
-        grid-column: 1;
-        padding: 24px;
-    }
-}
-
-/* Individual information slots inside expanded events */
-.event-details {
+/* Hide all event details when collapsed. */
+.events-grid .event-box .event-details {
     display: none;
 }
 
-.event-box.expanded .event-details {
+/* Show details only inside the expanded event. */
+.events-grid .event-box.expanded .event-details {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    align-items: stretch;
+    gap: 16px;
     margin-top: 30px;
 }
 
+/* Expand the selected box across the full grid. */
+.events-grid .event-box.expanded {
+    grid-column: 1 / -1;
+    min-height: 70vh;
+    padding: 35px;
+    background-color: var(--paper);
+    border-top-color: var(--gold);
+    box-shadow: 0 5px 20px rgba(25, 45, 70, 0.08);
+}
+
+/* Expanded heading */
+.event-box.expanded h2 {
+    font-size: 2.2rem;
+}
+
+/* Keep the expanded box visually consistent. */
+.event-box.expanded:hover {
+    border-top-color: var(--gold);
+}
+
+/* =========================================
+   INDIVIDUAL TOPIC SLOTS
+   ========================================= */
+
 .event-slot {
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    min-height: 120px;
-    box-sizing: border-box;
+    min-width: 0;
+    min-height: 130px;
+    padding: 21px 22px;
+
+    background-color: #f8f5ed;
+    border: 1px solid #e2dbcd;
+    border-left: 3px solid var(--gold);
+    border-radius: 2px;
 }
 
 .event-slot h3 {
-    color: #75dc89;
-    margin-top: 0;
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    font-weight: bold;
 }
 
 .event-slot p {
-    color: white;
-    line-height: 1.6;
+    margin: 0;
+    color: #50545a;
+    font-size: 0.95rem;
+    line-height: 1.75;
 }
 
-@media (max-width: 650px) {
-    .event-box.expanded .event-details {
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.events-footer {
+    margin-top: 50px;
+    padding: 24px 15px;
+    text-align: center;
+
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+.events-footer p {
+    margin: 4px 0;
+}
+
+.events-footer p:first-child {
+    color: var(--navy);
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+.events-footer p:last-child {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+/* =========================================
+   OTHER SITE PAGES
+   Shared by Home, Links, and Contact.
+   ========================================= */
+
+body > h1,
+body > p {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+body > h1 {
+    margin-top: 35px;
+}
+
+/* General links outside navigation */
+body a:not(.logo):not(.header nav a) {
+    transition: color 0.2s ease;
+}
+
+body a:not(.logo):not(.header nav a):hover {
+    color: #806a39;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 760px) {
+    .header {
+        justify-content: center;
+        text-align: center;
+        padding: 18px 4%;
+    }
+
+    .logo {
+        font-size: 1.45rem;
+    }
+
+    .header nav {
+        width: 100%;
+        gap: 2px;
+    }
+
+    .header nav a {
+        padding: 8px 10px;
+    }
+
+    .events-page {
+        width: 92%;
+        padding-top: 32px;
+    }
+
+    .events-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .event-box {
+        min-height: 0;
+        padding: 23px;
+    }
+
+    .events-grid .event-box.expanded {
+        grid-column: 1;
+        min-height: 0;
+        padding: 24px;
+    }
+
+    .event-box.expanded h2 {
+        font-size: 1.9rem;
+    }
+
+    .events-grid .event-box.expanded .event-details {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .event-slot {
+        min-height: 0;
+        padding: 18px;
+    }
+
+    .page-intro {
+        margin-bottom: 30px;
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
     }
 }

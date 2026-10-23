@@ -1,205 +1,509 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>MMS Science Olympiad</title>
-        <link rel="icon" type="image/x-icon" href="scienceolympiadvasologo.png">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        
-        <header class="header">
-            <h1 class="logo">MMS Science Olympiad</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="events.html">Events</a>
-                <a href="links.html">Links</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="events-grid">
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Anatomy &amp; Physiology</h2>
-        <p>Explore the structure and function of the human body.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>Organ systems, anatomy, physiology, and homeostasis.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add study guides, notes, and practice questions here.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add useful websites and reference materials here.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add the rules and requirements for this event.</p>
-            </div>
-        </div>
-    </section>
+    <title>Events | MMS Science Olympiad</title>
 
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Botany</h2>
-        <p>Investigate plant structures, reproduction, and adaptations.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>Photosynthesis, plant anatomy, transport, reproduction, and classification.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add notes, diagrams, identification guides, and practice questions.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add plant identification websites and reference materials.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add the official event rules and specimen requirements.</p>
-            </div>
-        </div>
-    </section>
+    <link rel="icon" type="image/x-icon" href="scienceolympiadvasologo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Disease Detectives</h2>
-        <p>Investigate disease outbreaks using epidemiology.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>Transmission, outbreak investigation, and public health.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add case studies and epidemiology practice problems.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add public health references and data resources.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add the official rules and event requirements.</p>
-            </div>
-        </div>
-    </section>
+<body>
+    <header class="header">
+        <a class="logo" href="index.html">MMS Science Olympiad</a>
 
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Rocks &amp; Minerals</h2>
-        <p>Identify geological specimens and explore Earth's history.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>Mineral properties, rock identification, and geological processes.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add identification charts and mineral notes.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add geology references and specimen databases.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add specimen lists and official event rules.</p>
-            </div>
-        </div>
-    </section>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="events.html" aria-current="page">Events</a>
+            <a href="links.html">Links</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Solar System</h2>
-        <p>Study planets, moons, stars, and astronomical phenomena.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>Planetary science, orbital mechanics, and stellar evolution.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add astronomy notes, diagrams, and practice problems.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add astronomy databases and observation tools.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add the official rules and reference requirements.</p>
-            </div>
-        </div>
-    </section>
+    <main class="events-page">
+        <section class="page-intro">
+            <p class="eyebrow">MOODY MIDDLE SCHOOL</p>
+            <h1>Science Olympiad Events</h1>
+            <div class="title-rule"></div>
+            <p class="events-intro">
+                Explore our events, discover the science behind each challenge,
+                and find materials to help you prepare.
+                Select an event to view its topics and resources.
+            </p>
+        </section>
 
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Water Quality</h2>
-        <p>Analyze water chemistry and aquatic ecosystems.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>pH, dissolved oxygen, turbidity, nutrients, and pollution.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add chemical reference charts and practice tests.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add water testing guides and environmental references.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add the official rules and testing requirements.</p>
-            </div>
-        </div>
-    </section>
+        <div class="events-grid">
 
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Experimental Design</h2>
-        <p>Design controlled experiments and analyze scientific data.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>Variables, hypotheses, controls, data analysis, and error.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add experiment templates and sample data sets.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add graphing tools and scientific method references.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add the official event requirements.</p>
-            </div>
-        </div>
-    </section>
+            <!-- CRIME BUSTERS -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">01</div>
+                <h2>Crime Busters</h2>
+                <p class="event-summary">
+                    Analyze evidence, identify unknown substances, and solve
+                    simulated crimes using chemistry.
+                </p>
+                <span class="expand-label">Explore event +</span>
 
-    <section class="event-box" onclick="toggleEvent(this)">
-        <h2>Science Lab</h2>
-        <p>Apply scientific knowledge to practical laboratory challenges.</p>
-        <div class="event-details" onclick="event.stopPropagation()">
-            <div class="event-slot">
-                <h3>Topics</h3>
-                <p>Laboratory techniques, measurements, observations, and analysis.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Study Materials</h3>
-                <p>Add lab procedures, reference sheets, and practice activities.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Resources</h3>
-                <p>Add laboratory safety guides and equipment references.</p>
-            </div>
-            <div class="event-slot">
-                <h3>Event Rules</h3>
-                <p>Add the official event rules and equipment requirements.</p>
-            </div>
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Chemistry Fundamentals</h3>
+                        <p>Atoms, compounds, mixtures, physical properties,
+                        chemical properties, and chemical reactions.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Separation Techniques</h3>
+                        <p>Filtration, chromatography, evaporation, and
+                        separating mixtures based on their properties.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Substance Identification</h3>
+                        <p>Solubility, pH, density, precipitates, and chemical
+                        tests used to distinguish unknown samples.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Forensic Analysis</h3>
+                        <p>Analyze evidence such as powders, fibers, and inks
+                        using the techniques allowed by the event rules.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Data and Conclusions</h3>
+                        <p>Record observations, compare evidence, interpret
+                        results, and justify conclusions with data.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Study Materials</h3>
+                        <p>Add laboratory procedures, identification charts,
+                        reference sheets, and practice cases.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HOVERCRAFT -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">02</div>
+                <h2>Hovercraft</h2>
+                <p class="event-summary">
+                    Apply engineering and physics to design, build, and test
+                    a device that moves on a cushion of air.
+                </p>
+                <span class="expand-label">Explore event +</span>
+
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Forces and Motion</h3>
+                        <p>Newton's laws, friction, inertia, acceleration,
+                        and net force.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Air Pressure and Lift</h3>
+                        <p>Air cushions, pressure differences, airflow,
+                        and the physics of lift.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Propulsion</h3>
+                        <p>Thrust, drag, fans, motors, and efficient movement.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Engineering Design</h3>
+                        <p>Material selection, dimensions, weight distribution,
+                        construction, and design improvements.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Testing and Data</h3>
+                        <p>Measure performance, compare prototypes, identify
+                        errors, and improve reliability.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Build Plans and Rules</h3>
+                        <p>Add sketches, materials, construction notes,
+                        and official specifications.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROLLERCOASTER -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">03</div>
+                <h2>Rollercoaster</h2>
+                <p class="event-summary">
+                    Use physics and engineering to understand energy,
+                    motion, and roller coaster design.
+                </p>
+                <span class="expand-label">Explore event +</span>
+
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Energy</h3>
+                        <p>Gravitational potential energy, kinetic energy,
+                        conservation of energy, and energy losses.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Forces and Motion</h3>
+                        <p>Gravity, friction, acceleration, momentum,
+                        and centripetal acceleration.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Track Geometry</h3>
+                        <p>Slopes, curves, elevation changes, and how track
+                        shape affects motion.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Engineering and Construction</h3>
+                        <p>Materials, alignment, structural stability,
+                        and repeatable performance.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Testing and Optimization</h3>
+                        <p>Measure performance, identify failure points,
+                        and improve consistency.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Build Plans and Rules</h3>
+                        <p>Add diagrams, construction notes, scoring criteria,
+                        and official requirements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DISEASE DETECTIVES -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">04</div>
+                <h2>Disease Detectives</h2>
+                <p class="event-summary">
+                    Investigate outbreaks, analyze epidemiological data,
+                    and determine how diseases spread.
+                </p>
+                <span class="expand-label">Explore event +</span>
+
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Epidemiology Fundamentals</h3>
+                        <p>Incidence, prevalence, morbidity, mortality,
+                        and disease risk factors.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Pathogens and Transmission</h3>
+                        <p>Bacteria, viruses, fungi, parasites, reservoirs,
+                        and routes of transmission.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Outbreak Investigation</h3>
+                        <p>Case definitions, epidemic curves, attack rates,
+                        and identifying outbreak sources.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Statistics and Study Design</h3>
+                        <p>Study types, controls, relative risk,
+                        data interpretation, and bias.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Public Health</h3>
+                        <p>Disease prevention, vaccination, surveillance,
+                        and evidence-based interventions.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Study Materials</h3>
+                        <p>Add epidemiology formulas, case studies,
+                        data sets, and practice investigations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BOTANY -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">05</div>
+                <h2>Botany</h2>
+                <p class="event-summary">
+                    Explore plant anatomy, cellular energy, genetics,
+                    reproduction, and ecology.
+                </p>
+                <span class="expand-label">Explore event +</span>
+
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Plant Structure</h3>
+                        <p>Roots, stems, leaves, flowers, vascular tissues,
+                        and specialized plant cells.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Thylakoids and Organelles</h3>
+                        <p>Thylakoid membranes, chloroplast structure,
+                        mitochondria, and their roles in cellular energy.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Photosynthesis and Calvin Cycle</h3>
+                        <p>Light-dependent reactions, electron transport,
+                        carbon fixation, and carbohydrate production.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Glycolysis and Krebs Cycle</h3>
+                        <p>Glucose breakdown, cellular respiration,
+                        electron carriers, and energy transfer.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Hydrogen Ions and ATP</h3>
+                        <p>pH, proton gradients, chemiosmosis, ATP synthase,
+                        and oxidative phosphorylation.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Microbes and Nitrogen</h3>
+                        <p>Nitrogen fixation, nitrification, decomposition,
+                        and microbial nutrient cycling.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Minerals and Phosphorus</h3>
+                        <p>Essential nutrients, mineral deficiencies,
+                        phosphorus availability, and plant growth.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Water Transport</h3>
+                        <p>Xylem, phloem, osmosis, transpiration,
+                        cohesion, and water potential.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Genetics and Reproduction</h3>
+                        <p>Inheritance, plant life cycles, pollination,
+                        fertilization, and seed development.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Ecology</h3>
+                        <p>Food webs, ecosystems, competition,
+                        biodiversity, and environmental interactions.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Advanced Cellular Energy</h3>
+                        <p>Trace the biochemical pathways involved in ATP
+                        production, from glycolysis through oxidative
+                        phosphorylation.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Study Materials</h3>
+                        <p>Add cell diagrams, metabolic pathways,
+                        reference sheets, and practice questions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROCKS AND MINERALS -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">06</div>
+                <h2>Rocks and Minerals</h2>
+                <p class="event-summary">
+                    Identify geological specimens and investigate the
+                    processes that shape Earth's materials.
+                </p>
+                <span class="expand-label">Explore event +</span>
+
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Mineral Properties</h3>
+                        <p>Hardness, streak, luster, cleavage, fracture,
+                        density, and crystal form.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Mineral Identification</h3>
+                        <p>Use physical properties and diagnostic tests
+                        to distinguish mineral specimens.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Igneous Rocks</h3>
+                        <p>Magma, lava, cooling rates, crystal size,
+                        and igneous textures.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Sedimentary Rocks</h3>
+                        <p>Weathering, erosion, deposition, compaction,
+                        cementation, and fossils.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Metamorphic Rocks</h3>
+                        <p>Heat, pressure, recrystallization, foliation,
+                        and parent rocks.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Earth Processes</h3>
+                        <p>The rock cycle, plate tectonics, geological time,
+                        and mineral formation.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Study Materials</h3>
+                        <p>Add specimen charts, classification keys,
+                        diagrams, and practice tests.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOLAR SYSTEM -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">07</div>
+                <h2>Solar System</h2>
+                <p class="event-summary">
+                    Investigate cosmic origins, stellar properties,
+                    planetary systems, and habitability.
+                </p>
+                <span class="expand-label">Explore event +</span>
+
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Beginning of the Universe</h3>
+                        <p>The Big Bang, cosmic expansion, and the formation
+                        of the first elements.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Star Formation</h3>
+                        <p>Nebulae, gravitational collapse, protostars,
+                        nuclear fusion, and stellar evolution.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Earth's History</h3>
+                        <p>Earth's formation, geological time,
+                        major transitions, and planetary evolution.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Stellar and Planetary Spectroscopy</h3>
+                        <p>Emission and absorption spectra, spectral lines,
+                        temperature, and atmospheric composition.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Planet Composition</h3>
+                        <p>Planetary density, rocky and gaseous planets,
+                        interiors, and atmospheric properties.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>What Makes a Planet Habitable?</h3>
+                        <p>Liquid water, temperature, atmosphere,
+                        energy sources, and habitability factors.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Kepler's Laws and Exoplanets</h3>
+                        <p>Orbital motion, planetary periods, orbital
+                        distances, and exoplanet detection.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Technology and Estimation</h3>
+                        <p>Use calculations, data analysis, modeling,
+                        and technology to estimate planetary properties.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Advanced Habitability Analysis</h3>
+                        <p>Combine astronomical observations and planetary
+                        characteristics to evaluate potential habitability.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Study Materials</h3>
+                        <p>Add equations, spectral charts, planetary data,
+                        and practice problems.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BOOMILEVER -->
+            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
+                onkeydown="handleEventKey(event, this)" aria-expanded="false">
+                <div class="event-number">08</div>
+                <h2>Boomilever</h2>
+                <p class="event-summary">
+                    Design and test a lightweight cantilever structure
+                    that supports a load efficiently.
+                </p>
+                <span class="expand-label">Explore event +</span>
+
+                <div class="event-details" onclick="event.stopPropagation()">
+                    <div class="event-slot">
+                        <h3>Forces and Equilibrium</h3>
+                        <p>Force diagrams, Newton's laws, static equilibrium,
+                        and support reactions.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Torque and Moments</h3>
+                        <p>Lever arms, rotational equilibrium,
+                        bending moments, and load placement.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Tension and Compression</h3>
+                        <p>Internal forces, structural members,
+                        buckling, and failure modes.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Structural Design</h3>
+                        <p>Trusses, triangles, joints, geometry,
+                        and efficient load distribution.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Materials and Construction</h3>
+                        <p>Material selection, mass efficiency,
+                        adhesives, and construction precision.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Testing and Optimization</h3>
+                        <p>Measure supported loads, evaluate structural
+                        efficiency, and improve designs.</p>
+                    </div>
+                    <div class="event-slot">
+                        <h3>Build Plans and Rules</h3>
+                        <p>Add blueprints, dimensions, test records,
+                        and official construction specifications.</p>
+                    </div>
+                </div>
+            </section>
+
         </div>
-    </section>
-</div>
+
+        <footer class="events-footer">
+            <p>MMS Science Olympiad</p>
+            <p>Learn. Investigate. Engineer.</p>
+        </footer>
+    </main>
+
+    <script>
+        function toggleEvent(selectedBox) {
+            const wasExpanded =
+                selectedBox.classList.contains("expanded");
+
+            document.querySelectorAll(".event-box").forEach(box => {
+                box.classList.remove("expanded");
+                box.setAttribute("aria-expanded", "false");
+
+                const label = box.querySelector(".expand-label");
+                if (label) {
+                    label.textContent = "Explore event +";
+                }
+            });
+
+            if (!wasExpanded) {
+                selectedBox.classList.add("expanded");
+                selectedBox.setAttribute("aria-expanded", "true");
+
+                const label = selectedBox.querySelector(".expand-label");
+                if (label) {
+                    label.textContent = "Click heading to close −";
+                }
+
+                selectedBox.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        }
+
+        function handleEventKey(event, box) {
+            if (event.target !== box) return;
+
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                toggleEvent(box);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -630,3 +630,239 @@ a:hover {
         animation-iteration-count: 1 !important;
     }
 }
+
+
+/* =========================================
+   MEET THE LEADERS
+   ========================================= */
+
+.leaders-section {
+    max-width: 1150px;
+    margin: 55px auto;
+    padding: 40px 24px;
+}
+
+.leaders-heading {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-label {
+    margin-bottom: 10px;
+    color: #7353a6;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.leaders-heading h2 {
+    margin: 0 0 14px;
+    color: #28213b;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.leaders-heading > p:last-child {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Three-column leader grid */
+
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Individual leader cards */
+
+.leader-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    padding: 24px 20px;
+    background: #fff;
+    border: 1px solid #e8e2f0;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(40, 33, 59, 0.06);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(40, 33, 59, 0.12);
+}
+
+.leader-featured {
+    border-top: 4px solid #7353a6;
+}
+
+/* Initials placeholder */
+
+.leader-avatar {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: #eee7f8;
+    color: #654394;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+/* Leader names, roles, and descriptions */
+
+.leader-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.leader-role {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #7353a6;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.leader-info h3 {
+    margin: 0 0 10px;
+    color: #28213b;
+    font-size: 1.2rem;
+    overflow-wrap: anywhere;
+}
+
+.leader-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+/* Text beneath the grid */
+
+.leaders-note {
+    max-width: 750px;
+    margin: 32px auto 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+.contact-section {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    margin-bottom: 12px;
+    color: #28213b;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.contact-section > p {
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.contact-form-container {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #e8e2f0;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.contact-form-container iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+}
+
+/* Footer */
+
+.contact-footer {
+    margin-top: 50px;
+    padding: 24px 16px;
+    color: #666;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   ========================================= */
+
+/* Tablets */
+
+@media (max-width: 900px) {
+    .leaders-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .leaders-section {
+        padding: 30px 20px;
+    }
+
+    .leader-card {
+        padding: 20px 16px;
+    }
+}
+
+/* Phones */
+
+@media (max-width: 550px) {
+    .leaders-section {
+        margin: 30px auto;
+        padding: 25px 16px;
+    }
+
+    .leaders-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .leader-card {
+        padding: 20px;
+    }
+
+    .contact-section {
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .leader-card {
+        transition: none;
+    }
+
+    .leader-card:hover {
+        transform: none;
+    }
+}

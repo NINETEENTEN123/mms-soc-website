@@ -477,3 +477,134 @@ footer {
     }
 }
 
+
+/* ===== Shared main-site navigation ===== */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid var(--border-color, #e5deed);
+}
+
+.navbar {
+  width: min(1240px, 94%);
+  min-height: 72px;
+  margin: 0 auto;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.site-brand {
+  color: var(--deep-violet, #57377f);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--text-color, #29223c);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  background: var(--pale-lavender, #eee7f7);
+  color: var(--deep-violet, #57377f);
+}
+
+/* ===== Announcements page heading ===== */
+
+.announcements-hero {
+  padding: 55px 24px;
+  text-align: center;
+  color: white;
+  background:
+    linear-gradient(
+      rgba(48, 35, 72, 0.65),
+      rgba(48, 35, 72, 0.72)
+    ),
+    linear-gradient(135deg, #929ee8, #7650a8);
+}
+
+.announcements-hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.2;
+}
+
+.announcements-hero p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.announcements-main {
+  width: min(1000px, 94%);
+  min-height: 55vh;
+  margin: 0 auto;
+  padding: 35px 0 55px;
+}
+
+.announcements-main .intro {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.announcements-main .intro h2 {
+  margin-bottom: 8px;
+}
+
+.announcements-main .intro p {
+  color: var(--muted-text, #6b6872);
+  line-height: 1.7;
+}
+
+/* Keep navigation usable on phones */
+@media (max-width: 700px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .site-brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 3px;
+  }
+
+  .nav-links a {
+    padding: 7px 9px;
+    font-size: 0.87rem;
+  }
+
+  .announcements-hero {
+    padding: 40px 18px;
+  }
+
+  .announcements-main {
+    width: 92%;
+    padding-top: 25px;
+  }
+}
+

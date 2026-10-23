@@ -1372,3 +1372,58 @@ a:hover {
     }
 }
 
+
+/* ===== Contact page navigation: match Events ===== */
+
+body > .header {
+  margin: 0;
+  padding: 10px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+body > .header .logo {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+body > .header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+body > .header nav a {
+  display: inline-block;
+  padding: 10px 12px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+body > .header nav a:hover,
+body > .header nav a[aria-current="page"] {
+  color: white;
+  background-color: gray;
+}
+
+@media (max-width: 650px) {
+  body > .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body > .header nav {
+    width: 100%;
+  }
+
+  body > .header nav a {
+    padding: 8px;
+  }
+}

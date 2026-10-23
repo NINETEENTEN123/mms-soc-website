@@ -2,316 +2,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet the Leaders | MMS Science Olympiad</title>
-    <link rel="icon" type="image/x-icon" href="scienceolympiadvasologo.png">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the student leaders and sponsor of Moody Middle School Science Olympiad.">
+
+  <title>Meet Our Leaders | MMS Science Olympiad</title>
+
+  <link rel="icon" href="scienceolympiadvasologo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="site-brand" href="index.html">MMS Science Olympiad</a>
 
-    <header class="header">
-        <h1 class="logo">MMS Science Olympiad</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="links.html">Links</a>
-            <a href="contact.html">Contact</a>
-            <a href="announcements.html">Announcements</a>
-        </nav>
-    </header>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="links.html">Links</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="announcements.html">Announcements</a>
+      </div>
+    </nav>
+  </header>
 
-    <main>
+  <main>
+    <!-- ========== GROUP PHOTO BANNER ========== -->
+    <section class="leaders-hero">
+      <div class="leaders-hero-content">
+        <p class="eyebrow">MMS SCIENCE OLYMPIAD</p>
+        <h1>Meet Our Leaders</h1>
+        <p>
+          Meet the students and sponsor who help our club learn,
+          collaborate, and prepare for competition.
+        </p>
+      </div>
+    </section>
 
-        <!-- Group Photo Banner -->
-        <section class="leaders-hero">
-            <img
-                class="leaders-group-photo"
-                src="images/leaders-group.jpg"
-                alt="MMS Science Olympiad leadership team"
+    <!-- ========== LEADER CARDS ========== -->
+    <section class="leaders-section">
+      <div class="section-heading">
+        <p class="eyebrow">THE TEAM</p>
+        <h2>Our Leadership</h2>
+        <p>Select a profile to learn more about each person.</p>
+      </div>
+
+      <div id="leaders-grid" class="leaders-grid">
+        <p class="loading-message">Loading leader profiles...</p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT FORM ========== -->
+    <section class="contact-section">
+      <div class="contact-intro">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Contact Our Club</h2>
+        <p>
+          Have a question about meetings, events, or joining the club?
+          Send us a message using the form below.
+        </p>
+      </div>
+
+      <div class="contact-form-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeInqXBuPNhdnYY-_tNT1aIHCaymNL5Qfd2XrBnNXxpPvyVnQ/viewform?embedded=true"
+          title="MMS Science Olympiad contact form"
+          width="100%"
+          height="650"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          loading="lazy">
+          Loading contact form...
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MMS Science Olympiad</p>
+    <p>Learn. Investigate. Compete.</p>
+  </footer>
+
+  <script>
+    /* =========================================================
+       EDIT LEADER INFORMATION HERE
+
+       To add a leader:
+       1. Copy one complete object inside the LEADERS array.
+       2. Paste it before the closing ];
+       3. Change the id to a unique value.
+       4. Fill in the person's information.
+
+       IMAGE FILENAMES:
+       Put images in the repository's "images" folder.
+       Example: "reya-portrait.jpg" becomes
+       "images/reya-portrait.jpg".
+
+       Leave unused contact fields as "".
+       ========================================================= */
+
+    const LEADERS = [
+      {
+        id: "reyansh",
+        name: "Reyansh Choudhary",
+        role: "Event Leader",
+
+        // IMAGE FILENAMES
+        portrait: "reya-portrait.jpg",
+        pfp: "reya-pfp.jpg",
+
+        // CONTACT INFORMATION
+        email: "hcps-choudhark@henricostudents.org",
+        phone: "",
+        discord: "@reya1331",
+
+        // CLUB INFORMATION
+        events: ["Solar System", "Botany"],
+        bio: "Add a short biography here. Describe your interests, experience, and what you enjoy about Science Olympiad.",
+        favoriteSubjects: ["Astronomy", "Biology", "Environmental Science"]
+      },
+
+      {
+        id: "advaith",
+        name: "Advaith Satish",
+        role: "Event Leader",
+
+        portrait: "advaith-portrait.jpg",
+        pfp: "advaith-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a biography for this leader.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "leader-3",
+        name: "Add Leader Name",
+        role: "Leader",
+
+        portrait: "leader-3-portrait.jpg",
+        pfp: "leader-3-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a short biography here.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "leader-4",
+        name: "Add Leader Name",
+        role: "Leader",
+
+        portrait: "leader-4-portrait.jpg",
+        pfp: "leader-4-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a short biography here.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "leader-5",
+        name: "Add Leader Name",
+        role: "Leader",
+
+        portrait: "leader-5-portrait.jpg",
+        pfp: "leader-5-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a short biography here.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "leader-6",
+        name: "Add Leader Name",
+        role: "Leader",
+
+        portrait: "leader-6-portrait.jpg",
+        pfp: "leader-6-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a short biography here.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "leader-7",
+        name: "Add Leader Name",
+        role: "Leader",
+
+        portrait: "leader-7-portrait.jpg",
+        pfp: "leader-7-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a short biography here.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "leader-8",
+        name: "Add Leader Name",
+        role: "Leader",
+
+        portrait: "leader-8-portrait.jpg",
+        pfp: "leader-8-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a short biography here.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "leader-9",
+        name: "Add Leader Name",
+        role: "Leader",
+
+        portrait: "leader-9-portrait.jpg",
+        pfp: "leader-9-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Add event assignments here"],
+        bio: "Add a short biography here.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      },
+
+      {
+        id: "james-ramsey",
+        name: "James B. Ramsey",
+        role: "Club Sponsor",
+
+        portrait: "ramsey-portrait.jpg",
+        pfp: "ramsey-pfp.jpg",
+
+        email: "",
+        phone: "",
+        discord: "",
+
+        events: ["Club sponsorship", "Meeting support"],
+        bio: "Add a short introduction for the club sponsor.",
+        favoriteSubjects: ["Add favorite science subjects"]
+      }
+    ];
+
+    /* =========================================================
+       PAGE LOGIC
+       Normally, you do not need to edit anything below here.
+       ========================================================= */
+
+    const leadersGrid = document.getElementById("leaders-grid");
+
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[character]);
+    }
+
+    function imagePath(filename) {
+      if (!filename || !filename.trim()) return "";
+      return "images/" + filename.trim();
+    }
+
+    function makeImage(filename, className, alt) {
+      const path = imagePath(filename);
+
+      if (!path) {
+        return `
+          <div class="${className} image-placeholder" role="img"
+               aria-label="${escapeHTML(alt)} not provided">
+            <span>Photo<br>coming soon</span>
+          </div>
+        `;
+      }
+
+      return `
+        <img
+          class="${className}"
+          src="${escapeHTML(path)}"
+          alt="${escapeHTML(alt)}"
+          loading="lazy"
+          onerror="this.hidden=true; this.nextElementSibling.hidden=false"
+        >
+        <div class="${className} image-placeholder" hidden aria-hidden="true">
+          <span>Photo<br>coming soon</span>
+        </div>
+      `;
+    }
+
+    function contactLine(label, value, type) {
+      if (!value || !value.trim()) return "";
+
+      const safeValue = escapeHTML(value.trim());
+      let displayValue = safeValue;
+
+      if (type === "email") {
+        displayValue = `<a href="mailto:${safeValue}">${safeValue}</a>`;
+      } else if (type === "phone") {
+        const phoneLink = value.trim().replace(/[^\d+]/g, "");
+        displayValue = `<a href="tel:${escapeHTML(phoneLink)}">${safeValue}</a>`;
+      }
+
+      return `<p class="leader-contact"><strong>${label}:</strong> ${displayValue}</p>`;
+    }
+
+    function renderLeader(leader) {
+      const id = escapeHTML(leader.id);
+      const name = escapeHTML(leader.name);
+      const role = escapeHTML(leader.role);
+      const events = Array.isArray(leader.events) ? leader.events : [];
+      const subjects = Array.isArray(leader.favoriteSubjects)
+        ? leader.favoriteSubjects : [];
+
+      const eventsHTML = events
+        .filter(item => item && item.trim())
+        .map(item => `<span class="leader-tag">${escapeHTML(item)}</span>`)
+        .join("");
+
+      const subjectsHTML = subjects
+        .filter(item => item && item.trim())
+        .map(item => `<span class="leader-tag">${escapeHTML(item)}</span>`)
+        .join("");
+
+      const biography = leader.bio && leader.bio.trim()
+        ? escapeHTML(leader.bio)
+        : "Biography coming soon.";
+
+      const portrait = makeImage(
+        leader.portrait, "leader-portrait", `${leader.name} portrait`
+      );
+
+      const pfp = makeImage(
+        leader.pfp, "leader-pfp", `${leader.name} profile picture`
+      );
+
+      return `
+        <article class="leader-card">
+          <div class="leader-image-area">
+            ${portrait}
+            ${pfp}
+          </div>
+
+          <div class="leader-card-content">
+            <span class="leader-role">${role}</span>
+            <h3>${name}</h3>
+
+            <h4>Events</h4>
+            <div class="leader-tags">
+              ${eventsHTML || '<span class="muted">To be announced</span>'}
+            </div>
+
+            <div class="leader-contact-list">
+              ${contactLine("Email", leader.email, "email")}
+              ${contactLine("Phone", leader.phone, "phone")}
+              ${contactLine("Discord", leader.discord, "text")}
+            </div>
+
+            <button
+              class="leader-expand"
+              type="button"
+              aria-expanded="false"
+              aria-controls="profile-${id}"
             >
+              View Profile <span aria-hidden="true">+</span>
+            </button>
 
-            <div class="leaders-hero-overlay">
-                <p class="section-label">MEET THE TEAM</p>
-                <h2>Meet Our Leaders</h2>
-                <p>
-                    The people behind the experiments, competitions,
-                    teamwork, and scientific discovery.
-                </p>
+            <div class="leader-profile" id="profile-${id}" hidden>
+              <h4>About Me</h4>
+              <p>${biography}</p>
+
+              <h4>Favorite Science Subjects</h4>
+              <div class="leader-tags">
+                ${subjectsHTML || '<span class="muted">To be announced</span>'}
+              </div>
+
+              <h4>Portrait</h4>
+              ${makeImage(
+                leader.portrait,
+                "leader-expanded-portrait",
+                `${leader.name} portrait`
+              )}
+
+              <h4>Contact</h4>
+              <div class="leader-contact-list">
+                ${contactLine("Email", leader.email, "email")}
+                ${contactLine("Phone", leader.phone, "phone")}
+                ${contactLine("Discord", leader.discord, "text")}
+                ${!leader.email && !leader.phone && !leader.discord
+                  ? '<p class="muted">No public contact details provided.</p>'
+                  : ""}
+              </div>
             </div>
-        </section>
+          </div>
+        </article>
+      `;
+    }
 
-        <!-- Leadership Introduction -->
-        <section class="leaders-section">
+    function renderLeaders() {
+      leadersGrid.innerHTML = LEADERS.map(renderLeader).join("");
+    }
 
-            <div class="leaders-heading">
-                <p class="section-label">MMS SCIENCE OLYMPIAD</p>
-                <h2>Our Leadership Team</h2>
-                <p>
-                    Meet the students and sponsor who help our club learn,
-                    collaborate, and prepare for competition.
-                </p>
-            </div>
+    leadersGrid.addEventListener("click", event => {
+      const button = event.target.closest(".leader-expand");
+      if (!button) return;
 
-            <div class="leaders-grid">
+      const profileId = button.getAttribute("aria-controls");
+      const profile = document.getElementById(profileId);
+      if (!profile) return;
 
-                <!-- Leader 1 -->
-                <article class="leader-card leader-featured">
-                    <div class="leader-photo-wrap">
-                        <img
-                            class="leader-portrait"
-                            src="images/reya-portrait.jpg"
-                            alt="Portrait of Reyansh Choudhary"
-                        >
-                        <img
-                            class="leader-pfp"
-                            src="images/reya-pfp.jpg"
-                            alt="Reyansh Choudhary profile picture"
-                        >
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Event Lead</span>
-                        <h3>Reyansh Choudhary</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Solar System, Botany
-                        </p>
-                        <p>
-                            Focuses on preparing for competitions and
-                            exploring scientific topics.
-                        </p>
-                        <div class="leader-links">
-                            <a href="mailto:hcps-choudhark@henricostudents.org">
-                                School Email
-                            </a>
-                            <span class="leader-discord">@reya1331</span>
-                        </div>
-                    </div>
-                </article>
+      const opening = profile.hidden;
+      profile.hidden = !opening;
+      button.setAttribute("aria-expanded", String(opening));
+      button.innerHTML = opening
+        ? 'Hide Profile <span aria-hidden="true">−</span>'
+        : 'View Profile <span aria-hidden="true">+</span>';
+    });
 
-                <!-- Leader 2 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/advaith-portrait.jpg"
-                             alt="Portrait of Advaith Satish">
-                        <img class="leader-pfp"
-                             src="images/advaith-pfp.jpg"
-                             alt="Advaith Satish profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Event Lead</span>
-                        <h3>Advaith Satish</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>
-                            Helps coordinate event preparation and
-                            support club members.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Leader 3 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/leader-3-portrait.jpg"
-                             alt="Portrait of leader 3">
-                        <img class="leader-pfp"
-                             src="images/leader-3-pfp.jpg"
-                             alt="Leader 3 profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Student Leader</span>
-                        <h3>Add Leader Name</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>Add a short biography or description here.</p>
-                    </div>
-                </article>
-
-                <!-- Leader 4 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/leader-4-portrait.jpg"
-                             alt="Portrait of leader 4">
-                        <img class="leader-pfp"
-                             src="images/leader-4-pfp.jpg"
-                             alt="Leader 4 profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Student Leader</span>
-                        <h3>Add Leader Name</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>Add a short biography or description here.</p>
-                    </div>
-                </article>
-
-                <!-- Leader 5 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/leader-5-portrait.jpg"
-                             alt="Portrait of leader 5">
-                        <img class="leader-pfp"
-                             src="images/leader-5-pfp.jpg"
-                             alt="Leader 5 profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Student Leader</span>
-                        <h3>Add Leader Name</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>Add a short biography or description here.</p>
-                    </div>
-                </article>
-
-                <!-- Leader 6 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/leader-6-portrait.jpg"
-                             alt="Portrait of leader 6">
-                        <img class="leader-pfp"
-                             src="images/leader-6-pfp.jpg"
-                             alt="Leader 6 profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Student Leader</span>
-                        <h3>Add Leader Name</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>Add a short biography or description here.</p>
-                    </div>
-                </article>
-
-                <!-- Leader 7 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/leader-7-portrait.jpg"
-                             alt="Portrait of leader 7">
-                        <img class="leader-pfp"
-                             src="images/leader-7-pfp.jpg"
-                             alt="Leader 7 profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Student Leader</span>
-                        <h3>Add Leader Name</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>Add a short biography or description here.</p>
-                    </div>
-                </article>
-
-                <!-- Leader 8 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/leader-8-portrait.jpg"
-                             alt="Portrait of leader 8">
-                        <img class="leader-pfp"
-                             src="images/leader-8-pfp.jpg"
-                             alt="Leader 8 profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Student Leader</span>
-                        <h3>Add Leader Name</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>Add a short biography or description here.</p>
-                    </div>
-                </article>
-
-                <!-- Leader 9 -->
-                <article class="leader-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/leader-9-portrait.jpg"
-                             alt="Portrait of leader 9">
-                        <img class="leader-pfp"
-                             src="images/leader-9-pfp.jpg"
-                             alt="Leader 9 profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Student Leader</span>
-                        <h3>Add Leader Name</h3>
-                        <p class="leader-events">
-                            <strong>Events:</strong> Add event assignments
-                        </p>
-                        <p>Add a short biography or description here.</p>
-                    </div>
-                </article>
-
-                <!-- Club Sponsor -->
-                <article class="leader-card sponsor-card">
-                    <div class="leader-photo-wrap">
-                        <img class="leader-portrait"
-                             src="images/ramsey-portrait.jpg"
-                             alt="Portrait of James B. Ramsey">
-                        <img class="leader-pfp"
-                             src="images/ramsey-pfp.jpg"
-                             alt="James B. Ramsey profile picture">
-                    </div>
-                    <div class="leader-info">
-                        <span class="leader-role">Club Sponsor</span>
-                        <h3>James B. Ramsey</h3>
-                        <p class="leader-events">
-                            <strong>Role:</strong> Faculty sponsor
-                        </p>
-                        <p>
-                            Supports the club and helps guide its
-                            activities and competition preparation.
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-
-            <div class="leaders-note">
-                <h2>GO RAIDERS!</h2>
-                <p>
-                    We at MMS Science Olympiad are proud to be Raiders!
-                </p>
-            </div>
-
-        </section>
-
-        <!-- Contact Form -->
-        <section class="contact-section">
-            <h1>Contact Us</h1>
-            <p>
-                If you have any questions or would like to get in touch
-                with us, please feel free to reach out!
-            </p>
-
-            <div class="contact-form-container">
-                <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSeInqXBuPNhdnYY-_tNT1aIHCaymNL5Qfd2XrBnNXxpPvyVnQ/viewform?embedded=true"
-                    title="MMS Science Olympiad Contact Form"
-                    width="100%"
-                    height="739"
-                    frameborder="0"
-                    marginheight="0"
-                    marginwidth="0">
-                    Loading…
-                </iframe>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="contact-footer">
-        <p>MMS Science Olympiad · Moody Middle School</p>
-    </footer>
-
+    renderLeaders();
+  </script>
 </body>
 </html>

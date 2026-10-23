@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Announcements | MMS Science Olympiad</title>
+  <link rel="stylesheet" href="announcements.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back">← Main website</a>
+    <h1>MMS Science Olympiad</h1>
+    <p>Announcements and Club Discussions</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Announcements</h2>
+      <p>Keep up with club news, meetings, events, and discussions.</p>
+    </section>
+
+    <section id="admin-panel" class="panel">
+      <h2>Admin</h2>
+      <p>Admin publishing will be enabled after the secure admin setup.</p>
+      <button id="admin-login" type="button">Admin sign in</button>
+      <div id="admin-status" role="status"></div>
+    </section>
+
+    <section id="announcement-list" aria-live="polite">
+      <p>Loading announcements...</p>
+    </section>
+  </main>
+
+  <footer>
+    MMS Science Olympiad · Moody Middle School
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="announcements.js"></script>
+</body>
+</html>

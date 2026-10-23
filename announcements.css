@@ -114,3 +114,366 @@ footer {
 [hidden] {
   display: none !important;
 }
+
+
+/* =========================================
+   LEADERSHIP GROUP PHOTO BANNER
+   ========================================= */
+
+.leaders-hero {
+    position: relative;
+    width: 100%;
+    height: clamp(300px, 42vw, 500px);
+    overflow: hidden;
+    background: #302447;
+}
+
+.leaders-group-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.leaders-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(25, 18, 40, 0.85),
+        rgba(25, 18, 40, 0.48) 55%,
+        rgba(25, 18, 40, 0.12)
+    );
+}
+
+.leaders-hero-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: max(6%, calc((100% - 1150px) / 2));
+    width: min(600px, 82%);
+    color: #fff;
+    transform: translateY(-50%);
+}
+
+.leaders-hero-overlay .section-label {
+    color: #e0cbff;
+}
+
+.leaders-hero-overlay h2 {
+    margin: 10px 0 16px;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.1;
+}
+
+.leaders-hero-overlay > p:last-child {
+    max-width: 520px;
+    margin: 0;
+    color: #f2edf8;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* =========================================
+   LEADERSHIP INTRODUCTION
+   ========================================= */
+
+.leaders-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 24px;
+}
+
+.leaders-heading {
+    max-width: 700px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-label {
+    margin: 0 0 10px;
+    color: #7353a6;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.leaders-heading h2 {
+    margin: 0 0 14px;
+    color: #28213b;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.leaders-heading > p:last-child {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* =========================================
+   LEADER CARD GRID
+   ========================================= */
+
+.leaders-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.leader-card {
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8e2f0;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(40, 33, 59, 0.07);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(40, 33, 59, 0.13);
+}
+
+.leader-featured {
+    border-top: 4px solid #7353a6;
+}
+
+.sponsor-card {
+    border-top: 4px solid #b69b48;
+}
+
+/* =========================================
+   PORTRAIT AND PROFILE PICTURE
+   ========================================= */
+
+.leader-photo-wrap {
+    position: relative;
+    height: 240px;
+    background: #eee7f8;
+}
+
+.leader-portrait {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.leader-pfp {
+    position: absolute;
+    right: 18px;
+    bottom: -27px;
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    object-position: center;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #dcd0ed;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   LEADER INFORMATION
+   ========================================= */
+
+.leader-info {
+    padding: 30px 22px 24px;
+}
+
+.leader-role {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #7353a6;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.leader-info h3 {
+    margin: 0 0 12px;
+    color: #28213b;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.leader-info p {
+    margin: 0 0 12px;
+    color: #666;
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+.leader-info .leader-events {
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #f6f2fb;
+    color: #4c3a67;
+    font-size: 0.88rem;
+}
+
+.leader-events strong {
+    color: #654394;
+}
+
+.leader-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    font-size: 0.85rem;
+}
+
+.leader-links a {
+    color: #654394;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.leader-links a:hover {
+    text-decoration: underline;
+}
+
+.leader-discord {
+    color: #666;
+}
+
+/* =========================================
+   RAIDERS MESSAGE
+   ========================================= */
+
+.leaders-note {
+    margin: 48px auto 0;
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: #f5f0fb;
+    text-align: center;
+}
+
+.leaders-note h2 {
+    margin: 0 0 10px;
+    color: #654394;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    letter-spacing: 2px;
+}
+
+.leaders-note p {
+    margin: 0;
+    color: #514663;
+    line-height: 1.7;
+}
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+.contact-section {
+    max-width: 850px;
+    margin: 55px auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    margin-bottom: 12px;
+    color: #28213b;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.contact-section > p {
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.contact-form-container {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #e8e2f0;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.contact-form-container iframe {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+}
+
+.contact-footer {
+    margin-top: 50px;
+    padding: 24px 16px;
+    color: #666;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   ========================================= */
+
+@media (max-width: 900px) {
+    .leaders-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .leader-photo-wrap {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .leaders-hero {
+        height: 330px;
+    }
+
+    .leaders-hero-overlay {
+        left: 7%;
+        width: 86%;
+    }
+
+    .leaders-section {
+        padding: 35px 16px;
+    }
+
+    .leaders-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .leader-photo-wrap {
+        height: 280px;
+    }
+
+    .leader-info {
+        padding: 32px 20px 24px;
+    }
+
+    .contact-section {
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .leader-card {
+        transition: none;
+    }
+
+    .leader-card:hover {
+        transform: none;
+    }
+}
+

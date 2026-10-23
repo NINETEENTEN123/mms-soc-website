@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,7 @@
 </head>
 
 <body>
+    <!-- ==================== SITE HEADER ==================== -->
     <header class="header">
         <a class="logo" href="index.html">MMS Science Olympiad</a>
 
@@ -23,449 +23,710 @@
         </nav>
     </header>
 
-    <main class="events-page">
+    <main>
+        <!-- ==================== PAGE INTRODUCTION ==================== -->
         <section class="page-intro">
-            <p class="eyebrow">MOODY MIDDLE SCHOOL</p>
+            <p class="eyebrow">MOODY MIDDLE SCHOOL • GO RAIDERS • SCIENCE OLYMPIAD CLUB</p>
             <h1>Science Olympiad Events</h1>
-            <div class="title-rule"></div>
-            <p class="events-intro">
-                Explore our events, discover the science behind each challenge,
-                and find materials to help you prepare.
-                Select an event to view its topics and resources.
+
+            <p>
+                View our events
+                Access resources and learning materials
+                Stay updated with what we're teaching
+            </p>
+
+            <p class="intro-note">
+                Consult the current official event rules for the requirements
+                that apply to your competition.
             </p>
         </section>
 
-        <div class="events-grid">
+        <!-- ==================== EVENT GRID ==================== -->
+        <section class="events-grid" aria-label="Science Olympiad events">
 
-            <!-- CRIME BUSTERS -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">01</div>
+            <!-- ==================================================
+                 EVENT 1: CRIME BUSTERS
+                 Edit the title, summary, image, and topic list here.
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Crime Busters"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">01</span>
                 <h2>Crime Busters</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Crime Busters event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
-                    Analyze evidence, identify unknown substances, and solve
-                    simulated crimes using chemistry.
+                    Use chemistry, observation, and logical reasoning to
+                    analyze evidence and solve a simulated crime.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
-                        <h3>Chemistry Fundamentals</h3>
-                        <p>Atoms, compounds, mixtures, physical properties,
-                        chemical properties, and chemical reactions.</p>
+                        <h3>Physical Evidence</h3>
+                        <ul>
+                            <li>Identify and compare unknown materials</li>
+                            <li>Identify genetic markers, fibers, and more</li>
+                            <li>Use solubility, color, and reactions as evidence</li>
+                            <li>Reactivity Series, Magnetism, and other tests</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Separation Techniques</h3>
-                        <p>Filtration, chromatography, evaporation, and
-                        separating mixtures based on their properties.</p>
+                        <h3>Chromatography</h3>
+                        <ul>
+                            <li>Understand paper chromatography.</li>
+                            <li>Separate mixtures into their components.</li>
+                            <li>Compare pigment and ink patterns.</li>
+                            <li>Interpret chromatograms</li>
+                        </ul>
                     </div>
-                    <div class="event-slot">
-                        <h3>Substance Identification</h3>
-                        <p>Solubility, pH, density, precipitates, and chemical
-                        tests used to distinguish unknown samples.</p>
-                    </div>
+
                     <div class="event-slot">
                         <h3>Forensic Analysis</h3>
-                        <p>Analyze evidence such as powders, fibers, and inks
-                        using the techniques allowed by the event rules.</p>
+                        <ul>
+                            <li>Compare fingerprints, hair, and dna</li>
+                            <li>Examine hair, fibers, and other provided evidence.</li>
+                            <li>Record observations systematically.</li>
+                            <li>Use evidence to support or eliminate hypotheses.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Data and Conclusions</h3>
-                        <p>Record observations, compare evidence, interpret
-                        results, and justify conclusions with data.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Study Materials</h3>
-                        <p>Add laboratory procedures, identification charts,
-                        reference sheets, and practice cases.</p>
+                        <h3>Scientific Reasoning</h3>
+                        <ul>
+                            <li>Distinguish observations from inferences.</li>
+                            <li>Use comparison charts and reference tables.</li>
+                            <li>Evaluate evidence without jumping to conclusions.</li>
+                            <li>Build a conclusion supported by multiple clues.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- HOVERCRAFT -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">02</div>
+
+            <!-- ==================================================
+                 EVENT 2: HOVERCRAFT
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Hovercraft"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">02</span>
                 <h2>Hovercraft</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Hovercraft event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
-                    Apply engineering and physics to design, build, and test
-                    a device that moves on a cushion of air.
+                    Apply physics and engineering principles to design,
+                    construct, test, and improve a hovercraft.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
                         <h3>Forces and Motion</h3>
-                        <p>Newton's laws, friction, inertia, acceleration,
-                        and net force.</p>
+                        <ul>
+                            <li>Newton's laws of motion.</li>
+                            <li>Force, mass, acceleration, and momentum.</li>
+                            <li>Friction and resistance.</li>
+                            <li>How forces affect acceleration and stopping.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
                         <h3>Air Pressure and Lift</h3>
-                        <p>Air cushions, pressure differences, airflow,
-                        and the physics of lift.</p>
+                        <ul>
+                            <li>Air cushions and pressure differences.</li>
+                            <li>Lift and the reduction of surface friction.</li>
+                            <li>Airflow, leakage, and skirt design.</li>
+                            <li>How fan placement affects performance.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Propulsion</h3>
-                        <p>Thrust, drag, fans, motors, and efficient movement.</p>
+                        <h3>Electrical and Mechanical Systems</h3>
+                        <ul>
+                            <li>Motors, fans, and propellers.</li>
+                            <li>Battery voltage and electrical power.</li>
+                            <li>Mass distribution and structural stability.</li>
+                            <li>Safe construction and component mounting.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Engineering Design</h3>
-                        <p>Material selection, dimensions, weight distribution,
-                        construction, and design improvements.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Testing and Data</h3>
-                        <p>Measure performance, compare prototypes, identify
-                        errors, and improve reliability.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Build Plans and Rules</h3>
-                        <p>Add sketches, materials, construction notes,
-                        and official specifications.</p>
+                        <h3>Testing and Optimization</h3>
+                        <ul>
+                            <li>Design controlled performance tests.</li>
+                            <li>Measure speed, travel distance, or other specified metrics.</li>
+                            <li>Change one variable at a time.</li>
+                            <li>Use repeated trials to compare designs.</li>
+                            <li>Document improvements and design trade-offs.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- ROLLERCOASTER -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">03</div>
+
+            <!-- ==================================================
+                 EVENT 3: ROLLERCOASTER
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Rollercoaster"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">03</span>
                 <h2>Rollercoaster</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Rollercoaster event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
-                    Use physics and engineering to understand energy,
-                    motion, and roller coaster design.
+                    Investigate energy, motion, and forces while designing
+                    a track that meets specified engineering constraints.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
                         <h3>Energy</h3>
-                        <p>Gravitational potential energy, kinetic energy,
-                        conservation of energy, and energy losses.</p>
+                        <ul>
+                            <li>Gravitational potential energy.</li>
+                            <li>Kinetic energy.</li>
+                            <li>Conservation of mechanical energy.</li>
+                            <li>Energy conversion and energy loss.</li>
+                            <li>How starting height affects motion.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Forces and Motion</h3>
-                        <p>Gravity, friction, acceleration, momentum,
-                        and centripetal acceleration.</p>
+                        <h3>Motion and Forces</h3>
+                        <ul>
+                            <li>Speed, velocity, and acceleration.</li>
+                            <li>Newton's laws of motion.</li>
+                            <li>Gravity, friction, and normal force.</li>
+                            <li>Centripetal acceleration on curved tracks.</li>
+                            <li>How curves and slopes affect a moving object.</li>
+                        </ul>
                     </div>
-                    <div class="event-slot">
-                        <h3>Track Geometry</h3>
-                        <p>Slopes, curves, elevation changes, and how track
-                        shape affects motion.</p>
-                    </div>
+
                     <div class="event-slot">
                         <h3>Engineering and Construction</h3>
-                        <p>Materials, alignment, structural stability,
-                        and repeatable performance.</p>
+                        <ul>
+                            <li>Track geometry and slope design.</li>
+                            <li>Structural stability and material selection.</li>
+                            <li>Transitions between straight and curved sections.</li>
+                            <li>Design constraints and dimensional requirements.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Testing and Optimization</h3>
-                        <p>Measure performance, identify failure points,
-                        and improve consistency.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Build Plans and Rules</h3>
-                        <p>Add diagrams, construction notes, scoring criteria,
-                        and official requirements.</p>
+                        <h3>Measurement and Improvement</h3>
+                        <ul>
+                            <li>Measure travel time and distance.</li>
+                            <li>Calculate speed from measured data.</li>
+                            <li>Identify causes of inconsistent trials.</li>
+                            <li>Compare predictions with observed performance.</li>
+                            <li>Improve the design using test results.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- DISEASE DETECTIVES -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">04</div>
+
+            <!-- ==================================================
+                 EVENT 4: DISEASE DETECTIVES
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Disease Detectives"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">04</span>
                 <h2>Disease Detectives</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Disease Detectives event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
-                    Investigate outbreaks, analyze epidemiological data,
-                    and determine how diseases spread.
+                    Use epidemiology and data analysis to investigate disease
+                    patterns, identify risk factors, and evaluate prevention.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
                         <h3>Epidemiology Fundamentals</h3>
-                        <p>Incidence, prevalence, morbidity, mortality,
-                        and disease risk factors.</p>
+                        <ul>
+                            <li>Incidence and prevalence.</li>
+                            <li>Morbidity and mortality.</li>
+                            <li>Endemic, epidemic, and pandemic patterns.</li>
+                            <li>Communicable and noncommunicable diseases.</li>
+                            <li>Reservoirs, hosts, and modes of transmission.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Pathogens and Transmission</h3>
-                        <p>Bacteria, viruses, fungi, parasites, reservoirs,
-                        and routes of transmission.</p>
+                        <h3>Study Design</h3>
+                        <ul>
+                            <li>Descriptive, analytical, and experimental studies.</li>
+                            <li>Cohort and case-control studies.</li>
+                            <li>Exposure, outcome, and control variables.</li>
+                            <li>Bias, confounding, and limitations.</li>
+                            <li>Correlation versus causation.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Outbreak Investigation</h3>
-                        <p>Case definitions, epidemic curves, attack rates,
-                        and identifying outbreak sources.</p>
+                        <h3>Data and Calculations</h3>
+                        <ul>
+                            <li>Calculate attack rates and disease frequencies.</li>
+                            <li>Interpret tables, graphs, and epidemic curves.</li>
+                            <li>Compare risks between exposed and unexposed groups.</li>
+                            <li>Understand relative risk and odds ratios when required.</li>
+                            <li>Identify patterns and trends in outbreak data.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Statistics and Study Design</h3>
-                        <p>Study types, controls, relative risk,
-                        data interpretation, and bias.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Public Health</h3>
-                        <p>Disease prevention, vaccination, surveillance,
-                        and evidence-based interventions.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Study Materials</h3>
-                        <p>Add epidemiology formulas, case studies,
-                        data sets, and practice investigations.</p>
+                        <h3>Prevention and Public Health</h3>
+                        <ul>
+                            <li>Chain of infection and transmission pathways.</li>
+                            <li>Vaccination and immunity.</li>
+                            <li>Sanitation, hygiene, and isolation.</li>
+                            <li>Environmental and behavioral risk factors.</li>
+                            <li>Evaluate interventions using evidence.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- BOTANY -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">05</div>
+
+            <!-- ==================================================
+                 EVENT 5: BOTANY
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Botany"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">05</span>
                 <h2>Botany</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Botany event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
-                    Explore plant anatomy, cellular energy, genetics,
-                    reproduction, and ecology.
+                    Study plant anatomy, physiology, genetics, reproduction,
+                    ecology, and the biochemical processes that sustain life.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
                         <h3>Plant Structure</h3>
-                        <p>Roots, stems, leaves, flowers, vascular tissues,
-                        and specialized plant cells.</p>
+                        <ul>
+                            <li>Roots, stems, leaves, flowers, fruits, and seeds.</li>
+                            <li>Xylem and phloem.</li>
+                            <li>Meristems and plant growth.</li>
+                            <li>Stomata, guard cells, and gas exchange.</li>
+                            <li>Plant cells, chloroplasts, and organelles.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Thylakoids and Organelles</h3>
-                        <p>Thylakoid membranes, chloroplast structure,
-                        mitochondria, and their roles in cellular energy.</p>
+                        <h3>Photosynthesis</h3>
+                        <ul>
+                            <li>Light-dependent reactions.</li>
+                            <li>Thylakoid membranes and photosystems.</li>
+                            <li>Photolysis and electron transport.</li>
+                            <li>ATP and NADPH production.</li>
+                            <li>Calvin cycle, carbon fixation, and glucose synthesis.</li>
+                            <li>Limiting factors such as light, temperature, and CO₂.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Photosynthesis and Calvin Cycle</h3>
-                        <p>Light-dependent reactions, electron transport,
-                        carbon fixation, and carbohydrate production.</p>
+                        <h3>Cellular Respiration and ATP</h3>
+                        <ul>
+                            <li>Glycolysis and pyruvate oxidation.</li>
+                            <li>Krebs cycle, also called the citric acid cycle.</li>
+                            <li>Electron transport chain.</li>
+                            <li>Proton gradients and chemiosmosis.</li>
+                            <li>ATP synthase and oxidative phosphorylation.</li>
+                            <li>Fermentation and energy yield.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Glycolysis and Krebs Cycle</h3>
-                        <p>Glucose breakdown, cellular respiration,
-                        electron carriers, and energy transfer.</p>
+                        <h3>Water, Minerals, and Nutrients</h3>
+                        <ul>
+                            <li>Osmosis, diffusion, and water potential.</li>
+                            <li>Transpiration and cohesion-tension theory.</li>
+                            <li>Water transport through xylem.</li>
+                            <li>Phloem translocation and source-sink relationships.</li>
+                            <li>Essential mineral nutrients, including nitrogen and phosphorus.</li>
+                            <li>Plant-microbe relationships and nitrogen fixation.</li>
+                        </ul>
                     </div>
-                    <div class="event-slot">
-                        <h3>Hydrogen Ions and ATP</h3>
-                        <p>pH, proton gradients, chemiosmosis, ATP synthase,
-                        and oxidative phosphorylation.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Microbes and Nitrogen</h3>
-                        <p>Nitrogen fixation, nitrification, decomposition,
-                        and microbial nutrient cycling.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Minerals and Phosphorus</h3>
-                        <p>Essential nutrients, mineral deficiencies,
-                        phosphorus availability, and plant growth.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Water Transport</h3>
-                        <p>Xylem, phloem, osmosis, transpiration,
-                        cohesion, and water potential.</p>
-                    </div>
+
                     <div class="event-slot">
                         <h3>Genetics and Reproduction</h3>
-                        <p>Inheritance, plant life cycles, pollination,
-                        fertilization, and seed development.</p>
+                        <ul>
+                            <li>DNA, genes, chromosomes, and inheritance.</li>
+                            <li>Mitosis and meiosis.</li>
+                            <li>Pollination, fertilization, and seed development.</li>
+                            <li>Sexual and asexual reproduction.</li>
+                            <li>Plant life cycles and alternation of generations.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Ecology</h3>
-                        <p>Food webs, ecosystems, competition,
-                        biodiversity, and environmental interactions.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Advanced Cellular Energy</h3>
-                        <p>Trace the biochemical pathways involved in ATP
-                        production, from glycolysis through oxidative
-                        phosphorylation.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Study Materials</h3>
-                        <p>Add cell diagrams, metabolic pathways,
-                        reference sheets, and practice questions.</p>
+                        <h3>Ecology and Plant Adaptation</h3>
+                        <ul>
+                            <li>Food webs, energy flow, and nutrient cycles.</li>
+                            <li>Competition, mutualism, and parasitism.</li>
+                            <li>Plant responses to environmental conditions.</li>
+                            <li>Adaptations to drought, shade, and salinity.</li>
+                            <li>Population dynamics and ecosystem change.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- ROCKS AND MINERALS -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">06</div>
+
+            <!-- ==================================================
+                 EVENT 6: ROCKS AND MINERALS
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Rocks and Minerals"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">06</span>
                 <h2>Rocks and Minerals</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Rocks and Minerals event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
                     Identify geological specimens and investigate the
-                    processes that shape Earth's materials.
+                    processes that shape Earth's materials and surface.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
-                        <h3>Mineral Properties</h3>
-                        <p>Hardness, streak, luster, cleavage, fracture,
-                        density, and crystal form.</p>
-                    </div>
-                    <div class="event-slot">
                         <h3>Mineral Identification</h3>
-                        <p>Use physical properties and diagnostic tests
-                        to distinguish mineral specimens.</p>
+                        <ul>
+                            <li>Color, streak, luster, and transparency.</li>
+                            <li>Hardness and the Mohs scale.</li>
+                            <li>Cleavage, fracture, and crystal form.</li>
+                            <li>Density, specific gravity, and magnetism.</li>
+                            <li>Acid reactions and other diagnostic properties.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Igneous Rocks</h3>
-                        <p>Magma, lava, cooling rates, crystal size,
-                        and igneous textures.</p>
+                        <h3>Mineral Chemistry</h3>
+                        <ul>
+                            <li>Elements, compounds, and crystal structures.</li>
+                            <li>Silicate and nonsilicate minerals.</li>
+                            <li>Carbonates, oxides, sulfides, and sulfates.</li>
+                            <li>How chemical composition affects physical properties.</li>
+                            <li>Common mineral formulas and identifying characteristics.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Sedimentary Rocks</h3>
-                        <p>Weathering, erosion, deposition, compaction,
-                        cementation, and fossils.</p>
+                        <h3>Rock Types and the Rock Cycle</h3>
+                        <ul>
+                            <li>Igneous rocks and magma cooling.</li>
+                            <li>Sedimentary rocks and lithification.</li>
+                            <li>Metamorphic rocks, heat, and pressure.</li>
+                            <li>Texture, grain size, and mineral composition.</li>
+                            <li>Processes connecting the three rock groups.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Metamorphic Rocks</h3>
-                        <p>Heat, pressure, recrystallization, foliation,
-                        and parent rocks.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Earth Processes</h3>
-                        <p>The rock cycle, plate tectonics, geological time,
-                        and mineral formation.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Study Materials</h3>
-                        <p>Add specimen charts, classification keys,
-                        diagrams, and practice tests.</p>
+                        <h3>Geologic Processes</h3>
+                        <ul>
+                            <li>Plate tectonics and the formation of rocks.</li>
+                            <li>Weathering, erosion, and deposition.</li>
+                            <li>Fossils and relative dating.</li>
+                            <li>Geologic time and Earth's history.</li>
+                            <li>How to use identification keys and reference charts.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- SOLAR SYSTEM -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">07</div>
+
+            <!-- ==================================================
+                 EVENT 7: SOLAR SYSTEM
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Solar System"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">07</span>
                 <h2>Solar System</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Solar System event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
-                    Investigate cosmic origins, stellar properties,
-                    planetary systems, and habitability.
+                    Explore planetary science, stellar evolution, orbital
+                    mechanics, spectroscopy, and the conditions for habitability.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
                         <h3>Beginning of the Universe</h3>
-                        <p>The Big Bang, cosmic expansion, and the formation
-                        of the first elements.</p>
+                        <ul>
+                            <li>The Big Bang model and expansion of the universe.</li>
+                            <li>Cosmic background radiation and early elements.</li>
+                            <li>Formation of galaxies and large-scale structure.</li>
+                            <li>Evidence used to study the age of the universe.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Star Formation</h3>
-                        <p>Nebulae, gravitational collapse, protostars,
-                        nuclear fusion, and stellar evolution.</p>
+                        <h3>Star Formation and Evolution</h3>
+                        <ul>
+                            <li>Nebulae, protostars, and gravitational collapse.</li>
+                            <li>Nuclear fusion and stellar equilibrium.</li>
+                            <li>Main-sequence stars and the Hertzsprung-Russell diagram.</li>
+                            <li>Red giants, white dwarfs, neutron stars, and black holes.</li>
+                            <li>How stellar mass affects stellar evolution.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Earth's History</h3>
-                        <p>Earth's formation, geological time,
-                        major transitions, and planetary evolution.</p>
+                        <h3>Earth's History and Planet Formation</h3>
+                        <ul>
+                            <li>The solar nebula and accretion.</li>
+                            <li>Planetary differentiation and internal structure.</li>
+                            <li>Earth's geologic history and major transitions.</li>
+                            <li>Impact cratering and surface modification.</li>
+                            <li>Comparing terrestrial planets and gas or ice giants.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Stellar and Planetary Spectroscopy</h3>
-                        <p>Emission and absorption spectra, spectral lines,
-                        temperature, and atmospheric composition.</p>
+                        <h3>Spectroscopy and Composition</h3>
+                        <ul>
+                            <li>Electromagnetic radiation and the spectrum.</li>
+                            <li>Emission and absorption spectra.</li>
+                            <li>Using spectral lines to identify elements.</li>
+                            <li>Inferring atmospheric and surface composition.</li>
+                            <li>Temperature, luminosity, and wavelength relationships.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Planet Composition</h3>
-                        <p>Planetary density, rocky and gaseous planets,
-                        interiors, and atmospheric properties.</p>
+                        <h3>Orbits and Exoplanets</h3>
+                        <ul>
+                            <li>Kepler's three laws of planetary motion.</li>
+                            <li>Orbital period, semimajor axis, and eccentricity.</li>
+                            <li>Gravity and orbital dynamics.</li>
+                            <li>Transit and radial-velocity detection methods.</li>
+                            <li>Interpreting exoplanet data and measurement uncertainty.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>What Makes a Planet Habitable?</h3>
-                        <p>Liquid water, temperature, atmosphere,
-                        energy sources, and habitability factors.</p>
+                        <h3>Planetary Habitability</h3>
+                        <ul>
+                            <li>Habitable zones and stellar luminosity.</li>
+                            <li>Atmospheric composition and greenhouse effects.</li>
+                            <li>Liquid water, pressure, and temperature.</li>
+                            <li>Planetary mass, gravity, and atmospheric retention.</li>
+                            <li>Magnetic fields, radiation, and stellar activity.</li>
+                            <li>Using multiple lines of evidence to evaluate habitability.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Kepler's Laws and Exoplanets</h3>
-                        <p>Orbital motion, planetary periods, orbital
-                        distances, and exoplanet detection.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Technology and Estimation</h3>
-                        <p>Use calculations, data analysis, modeling,
-                        and technology to estimate planetary properties.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Advanced Habitability Analysis</h3>
-                        <p>Combine astronomical observations and planetary
-                        characteristics to evaluate potential habitability.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Study Materials</h3>
-                        <p>Add equations, spectral charts, planetary data,
-                        and practice problems.</p>
+                        <h3>Data Analysis and Estimation</h3>
+                        <ul>
+                            <li>Read plots, tables, and planetary data.</li>
+                            <li>Compare planets using consistent criteria.</li>
+                            <li>Estimate unknown quantities from given evidence.</li>
+                            <li>Evaluate uncertainty and competing explanations.</li>
+                            <li>Use permitted reference materials and technology when rules allow.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-            <!-- BOOMILEVER -->
-            <section class="event-box" onclick="toggleEvent(this)" tabindex="0"
-                onkeydown="handleEventKey(event, this)" aria-expanded="false">
-                <div class="event-number">08</div>
+
+            <!-- ==================================================
+                 EVENT 8: BOOMILEVER
+                 ================================================== -->
+            <article class="event-box"
+                     tabindex="0"
+                     role="button"
+                     aria-expanded="false"
+                     aria-label="Explore Boomilever"
+                     onclick="toggleEvent(this)"
+                     onkeydown="handleEventKey(event, this)">
+
+                <span class="event-number">08</span>
                 <h2>Boomilever</h2>
+
+                <img
+                    class="image-placeholder"
+                    src="az_background.jpeg"
+                    alt="Boomilever event image placeholder"
+                    loading="lazy"
+                    onclick="event.stopPropagation()"
+                >
+
                 <p class="event-summary">
-                    Design and test a lightweight cantilever structure
-                    that supports a load efficiently.
+                    Engineer a lightweight cantilever structure that supports
+                    a load while meeting specified design constraints.
                 </p>
+
                 <span class="expand-label">Explore event +</span>
 
                 <div class="event-details" onclick="event.stopPropagation()">
                     <div class="event-slot">
-                        <h3>Forces and Equilibrium</h3>
-                        <p>Force diagrams, Newton's laws, static equilibrium,
-                        and support reactions.</p>
+                        <h3>Structural Forces</h3>
+                        <ul>
+                            <li>Tension and compression.</li>
+                            <li>Shear forces and bending moments.</li>
+                            <li>Torque and equilibrium.</li>
+                            <li>Load distribution and reaction forces.</li>
+                            <li>How geometry changes structural performance.</li>
+                        </ul>
                     </div>
-                    <div class="event-slot">
-                        <h3>Torque and Moments</h3>
-                        <p>Lever arms, rotational equilibrium,
-                        bending moments, and load placement.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Tension and Compression</h3>
-                        <p>Internal forces, structural members,
-                        buckling, and failure modes.</p>
-                    </div>
+
                     <div class="event-slot">
                         <h3>Structural Design</h3>
-                        <p>Trusses, triangles, joints, geometry,
-                        and efficient load distribution.</p>
+                        <ul>
+                            <li>Cantilever behavior and support conditions.</li>
+                            <li>Triangles, trusses, and bracing.</li>
+                            <li>Member length, orientation, and placement.</li>
+                            <li>Joint design and connection strength.</li>
+                            <li>Material efficiency and structural stability.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
-                        <h3>Materials and Construction</h3>
-                        <p>Material selection, mass efficiency,
-                        adhesives, and construction precision.</p>
+                        <h3>Failure and Material Properties</h3>
+                        <ul>
+                            <li>Buckling under compression.</li>
+                            <li>Fracture under tension.</li>
+                            <li>Joint failure and local deformation.</li>
+                            <li>Strength-to-weight ratio.</li>
+                            <li>How material choice affects performance.</li>
+                        </ul>
                     </div>
+
                     <div class="event-slot">
                         <h3>Testing and Optimization</h3>
-                        <p>Measure supported loads, evaluate structural
-                        efficiency, and improve designs.</p>
-                    </div>
-                    <div class="event-slot">
-                        <h3>Build Plans and Rules</h3>
-                        <p>Add blueprints, dimensions, test records,
-                        and official construction specifications.</p>
+                        <ul>
+                            <li>Measure structural mass and supported load.</li>
+                            <li>Calculate load-to-mass performance when applicable.</li>
+                            <li>Identify weak points after testing.</li>
+                            <li>Use controlled iterations to improve the design.</li>
+                            <li>Follow event-specific dimensions and construction rules.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </article>
 
-        </div>
-
-        <footer class="events-footer">
-            <p>MMS Science Olympiad</p>
-            <p>Learn. Investigate. Engineer.</p>
-        </footer>
+        </section>
     </main>
 
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <p>MMS Science Olympiad</p>
+        <p class="footer-note">
+            Learn science. Build solutions. Think critically.
+        </p>
+    </footer>
+
+    <!-- ==================== EVENT INTERACTION ==================== -->
     <script>
+        /*
+         * Opens one event at a time.
+         * Edit the event text in the HTML above, not in this script.
+         */
         function toggleEvent(selectedBox) {
             const wasExpanded =
                 selectedBox.classList.contains("expanded");
@@ -475,6 +736,7 @@
                 box.setAttribute("aria-expanded", "false");
 
                 const label = box.querySelector(".expand-label");
+
                 if (label) {
                     label.textContent = "Explore event +";
                 }
@@ -485,8 +747,9 @@
                 selectedBox.setAttribute("aria-expanded", "true");
 
                 const label = selectedBox.querySelector(".expand-label");
+
                 if (label) {
-                    label.textContent = "Click heading to close −";
+                    label.textContent = "Close event −";
                 }
 
                 selectedBox.scrollIntoView({
@@ -496,8 +759,14 @@
             }
         }
 
+        /*
+         * Allows keyboard users to open and close events with
+         * Enter or Space.
+         */
         function handleEventKey(event, box) {
-            if (event.target !== box) return;
+            if (event.target !== box) {
+                return;
+            }
 
             if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();

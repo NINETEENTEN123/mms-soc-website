@@ -4,17 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Announcements | MMS Science Olympiad</title>
+
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="announcements.css">
 </head>
+
 <body>
-  <header>
-    <a href="index.html" class="back">← Main website</a>
-    <h1>MMS Science Olympiad</h1>
-    <p>Announcements and Club Discussions</p>
+  <!-- Main website navigation -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="site-brand" href="index.html">MMS Science Olympiad</a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="links.html">Links</a>
+        <a href="contact.html">Contact</a>
+        <a href="announcements.html" aria-current="page">Announcements</a>
+      </div>
+    </nav>
   </header>
 
-  <main>
+  <!-- Announcements page heading -->
+  <section class="announcements-hero">
+    <h1>Announcements &amp; Discussions</h1>
+    <p>Club news, meeting updates, events, and community discussions.</p>
+  </section>
+
+  <main class="announcements-main">
     <section class="intro">
       <h2>Announcements</h2>
       <p>Keep up with club news, meetings, events, and discussions.</p>
@@ -22,20 +41,26 @@
 
     <section id="admin-panel" class="panel">
       <h2>Admin</h2>
-      <p>Admin publishing will be enabled after the secure admin setup.</p>
+      <p>Sign in to manage club announcements.</p>
       <button id="admin-login" type="button">Admin sign in</button>
-      <div id="admin-status" role="status"></div>
+      <div id="admin-status" role="status" aria-live="polite"></div>
     </section>
 
-    <section id="announcement-list" aria-live="polite">
+    <section
+      id="announcement-list"
+      aria-label="Club announcements and discussions"
+      aria-live="polite"
+    >
       <p>Loading announcements...</p>
     </section>
   </main>
 
-  <footer>
-    MMS Science Olympiad · Moody Middle School
+  <footer class="site-footer">
+    <p>MMS Science Olympiad</p>
+    <p>Moody Middle School · Learn. Investigate. Compete.</p>
   </footer>
 
+  <!-- Keep Supabase and your existing announcement logic -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="announcements.js"></script>
 </body>

@@ -289,29 +289,21 @@
       return "images/" + filename.trim();
     }
 
-    function makeImage(filename, className, alt) {
+    function makeTinyAvatar(filename, alt) {
       const path = imagePath(filename);
 
       if (!path) {
-        return `
-          <div class="${className} image-placeholder" role="img"
-               aria-label="${escapeHTML(alt)} not provided">
-            <span>Photo<br>coming soon</span>
-          </div>
-        `;
+        return `<span class="tiny-avatar-placeholder" aria-hidden="true"></span>`;
       }
 
       return `
         <img
-          class="${className}"
+          class="tiny-pfp"
           src="${escapeHTML(path)}"
           alt="${escapeHTML(alt)}"
           loading="lazy"
-          onerror="this.hidden=true; this.nextElementSibling.hidden=false"
+          onerror="this.style.display='none'"
         >
-        <div class="${className} image-placeholder" hidden aria-hidden="true">
-          <span>Photo<br>coming soon</span>
-        </div>
       `;
     }
 
@@ -353,19 +345,18 @@
         ? escapeHTML(leader.bio)
         : "Biography coming soon.";
 
-      const pfp = makeImage(
-        leader.pfp, "leader-pfp", `${leader.name} profile picture`
+      const tinyPfp = makeTinyAvatar(
+        leader.pfp, `${leader.name} profile picture`
       );
 
       return `
         <article class="leader-card">
-          <div class="leader-image-area">
-            ${pfp}
-          </div>
-
           <div class="leader-card-content">
             <span class="leader-role">${role}</span>
-            <h3>${name}</h3>
+            <div class="leader-title-row">
+              ${tinyPfp}
+              <h3>${name}</h3>
+            </div>
 
             <h4>Events</h4>
             <div class="leader-tags">
@@ -395,13 +386,6 @@
               <div class="leader-tags">
                 ${subjectsHTML || '<span class="muted">To be announced</span>'}
               </div>
-
-              <h4>Profile Picture</h4>
-              ${makeImage(
-                leader.pfp,
-                "leader-expanded-pfp",
-                `${leader.name} profile picture`
-              )}
 
               <h4>Contact</h4>
               <div class="leader-contact-list">

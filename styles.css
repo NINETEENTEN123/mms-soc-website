@@ -1427,3 +1427,17 @@ body > .header nav a[aria-current="page"] {
     padding: 8px;
   }
 }
+.leader-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tiny-pfp {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
